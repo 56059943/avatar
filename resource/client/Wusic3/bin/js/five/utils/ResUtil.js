@@ -1,0 +1,89 @@
+//--------------------------------------------------------------------
+// 文件名:      ResUtil.ts
+// 内  容:      资源工具类
+// 说  明:
+// 创建人:      liy
+// 创建日期:    2018年9月10日
+//---------------------------------------------------------------------- 
+var five;
+(function (five) {
+    var utils;
+    (function (utils) {
+        var ResUtil = (function () {
+            function ResUtil() {
+            }
+            //获取3d模型资源
+            ResUtil.get3DUrl = function (value) {
+                var url = "res/3d/" + value + "/" + value + ".lh";
+                return url;
+            };
+            ResUtil.getDiceUrl = function (baseSkin, value) {
+                var url = baseSkin + value + ".png";
+                return url;
+            };
+            ResUtil.getColorSkin = function (color) {
+                if (color == Five.PlayerColor.RED)
+                    return "creator/image_qizi_red.png";
+                if (color == Five.PlayerColor.YELLOW)
+                    return "creator/image_qizi_yellow.png";
+                if (color == Five.PlayerColor.GREEN)
+                    return "creator/image_qizi_green.png";
+                if (color == Five.PlayerColor.BLUE)
+                    return "creator/image_qizi_blue.png";
+                return "";
+            };
+            //获取头像框
+            ResUtil.getIconFrameSkin = function (color) {
+                if (color == Five.PlayerColor.RED)
+                    return "photo/Fr_00.png";
+                if (color == Five.PlayerColor.YELLOW)
+                    return "photo/Fr_01.png";
+                if (color == Five.PlayerColor.GREEN)
+                    return "photo/Fr_02.png";
+                if (color == Five.PlayerColor.BLUE)
+                    return "photo/Fr_03.png";
+                return "";
+            };
+            ResUtil.getTokenSkin = function (color) {
+                if (color == Five.PlayerColor.RED)
+                    return "game/image_qizi_red.png";
+                if (color == Five.PlayerColor.YELLOW)
+                    return "game/image_qizi_yellow.png";
+                if (color == Five.PlayerColor.GREEN)
+                    return "game/image_qizi_green.png";
+                if (color == Five.PlayerColor.BLUE)
+                    return "game/image_qizi_blue.png";
+                return "";
+            };
+            ResUtil.getPaoPaoSkin = function (color) {
+                if (color == Five.PlayerColor.RED)
+                    return "game/bubble_red.png";
+                if (color == Five.PlayerColor.YELLOW)
+                    return "game/bubble_yellow.png";
+                if (color == Five.PlayerColor.GREEN)
+                    return "game/bubble_green.png";
+                if (color == Five.PlayerColor.BLUE)
+                    return "game/bubble_blue.png";
+                return "";
+            };
+            ResUtil.getRankSkin = function (rank) {
+                if (rank == 1)
+                    return "common/image_1st.png";
+                if (rank == 2)
+                    return "common/image_2st.png";
+                if (rank == 3)
+                    return "common/image_3st.png";
+                if (rank == 4)
+                    return "common/image_4st.png";
+                return "";
+            };
+            ResUtil.getStoreKey = function (value) {
+                return "data" + value;
+            };
+            return ResUtil;
+        }()); //end class ResUtil
+        ResUtil.resArray = [];
+        utils.ResUtil = ResUtil;
+    })(utils = five.utils || (five.utils = {}));
+})(five || (five = {})); //end module
+//# sourceMappingURL=ResUtil.js.map
