@@ -12,4 +12,5 @@ world.csproj
 world.sln
 
 /chrome
+/chrome/*
 
