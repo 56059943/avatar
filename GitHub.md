@@ -12,11 +12,13 @@ git config --global user.email "your email"
 参见：https://baijiahao.baidu.com/s?id=1621628813408131040&wfr=spider&for=pc
 git clone 项目地址
 git checkout -b dev  分支名dev
+	git branch dev
+	git checkout dev
 
 五，添加修改
 git add GitHub.md
 
-六，推送分支
+六，推送分支，指定被推送的分支名
 git push origin dev   分支名dev
 
 七，合并指定分支到当前分支
