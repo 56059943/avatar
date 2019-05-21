@@ -15,15 +15,18 @@ git checkout -b dev  分支名dev
 	git branch dev
 	git checkout dev
 
-五，添加修改
+五，添加修改，也叫stage changed
 git add GitHub.md
 
-六，推送分支，指定被推送的分支名
+六，提交注释
+git commit -m "update xxx"
+
+七，推送分支，指定被推送的分支名
 git push origin dev   分支名dev
 
-七，合并指定分支到当前分支
+八，合并指定分支到当前分支
 git merge dev 将分支名dev合并到当前分支 
 git merge master 将分支名master合并到当前分支 
 
-八，更新到最新
+九，更新到最新
 git pull
