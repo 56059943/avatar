@@ -61,7 +61,7 @@ var LayaAir3D = (function () {
         this.roleArray.forEach(function (value, index, array) {
             urls.push(value);
         });
-        Laya.loader.create(urls, Laya.Handler.create(this, this.onSceneOK), Laya.Handler.create(this, this.onSceneProgress));
+        Laya.loader.create(urls, Laya.Handler.create(this, this.onSceneOK), Laya.Handler.create(this, this.onSceneProgress, null, false));
         // //创建角色控制界面
         this.control = new ControlView();
         Laya.stage.addChild(this.control);
