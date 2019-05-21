@@ -24,3 +24,6 @@ git push origin dev   分支名dev
 七，合并指定分支到当前分支
 git merge dev 将分支名dev合并到当前分支 
 git merge master 将分支名master合并到当前分支 
+
+八，更新到最新
+git pull
