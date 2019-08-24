@@ -1,7 +1,9 @@
 class ControlView extends ui.ControlUI {
 
     private canRotate:boolean = false;
+    private isTurnLeft:boolean = false;
     private beginRotatePos:Laya.Vector2 = new Laya.Vector2(0, 0);
+    private lastRotatePos:Laya.Vector2 = new Laya.Vector2(0, 0);
     // private arr:Array<number> = [];
     constructor() {
         super();
@@ -14,19 +16,33 @@ class ControlView extends ui.ControlUI {
         //发送点击的组件名称
         this.event("btn_action",e.target.name);
 
-        this.beginRotatePos.x = e.stageX;
-        this.beginRotatePos.y = e.stageY;
+        this.beginRotatePos.fromArray([e.stageX, e.stageY]);
+        this.lastRotatePos.fromArray([e.stageX, e.stageY]);
         this.canRotate = true;
+        this.isTurnLeft = false;
     }
     private onMouseMoving(e:Laya.Event):void{
         //发送点击的组件名称
         if (this.canRotate)
         {
-            var d = this.beginRotatePos.x - e.stageX;
-            //var r = (d / 360) * 2 * Math.PI;
-            var r = (d / 360) * 28;
+            var isLeft = false;
+            if (this.lastRotatePos.x > e.stageX){
+                isLeft = true;
+            }
+            else if (this.lastRotatePos.x < e.stageX){
+                isLeft = false;
+            }
+            this.lastRotatePos.fromArray([e.stageX, e.stageY]);
+
+            if (this.isTurnLeft != isLeft){
+                this.isTurnLeft = isLeft;
+                this.beginRotatePos.x = e.stageX;
+            }
             //  r = d > 0 ? 0.01 : -0.01;
-            this.event("btn_rotate", -r);
+           var d = this.beginRotatePos.x - e.stageX;
+           //var r = (d / 360) * 2 * Math.PI;
+           var r = (d / 360) * 280;
+        this.event("btn_rotate", r);
         }
     }
     private onMouseUp(e:Laya.Event):void{
