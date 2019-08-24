@@ -76,8 +76,8 @@ class LayaAir3D {
         /*界面资源加载完成后*/
     private onUIComplete(): void {
         this.roleArray.splice(0);
-        this.roleArray.push(Five.ResUtil.get3DUrl("girl"));
-        this.roleArray.push(Five.ResUtil.get3DUrl("20200279"));
+        this.roleArray.push(Five.ResUtil.get3DUrl("girl"));//女孩模型
+        this.roleArray.push(Five.ResUtil.get3DUrl("20200279"));//女孩
         this.currentRole = this.roleArray[0];
 
         //加载3D场景与角色资源（资源资源后缀名，会创建默认3D显示对象类型）

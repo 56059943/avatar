@@ -4,14 +4,14 @@
 #以方括号“[]”包含单个字符的匹配列表；
 #以叹号“!”表示不忽略(跟踪)匹配到的文件或目录；
 
-/.vs
-/Library
-/obj
+/resource/client/Unity5.6.5f1/world/.vs
+/resource/client/Unity5.6.5f1/world/Library
+/resource/client/Unity5.6.5f1/world/obj
+/resource/client/Unity5.6.5f1/world/Temp
 Assembly-CSharp.csproj
 world.csproj
 world.sln
 
-/chrome
-/chrome/*
+/resource/client/Wusic3/.laya/chrome
 
-/resource/client/Unity5.6.5f1/world/obj
+

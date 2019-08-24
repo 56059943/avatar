@@ -26,7 +26,7 @@ class ControlView extends ui.ControlUI {
             //var r = (d / 360) * 2 * Math.PI;
             var r = (d / 360) * 28;
             //  r = d > 0 ? 0.01 : -0.01;
-            this.event("btn_rotate", r);
+            this.event("btn_rotate", -r);
         }
     }
     private onMouseUp(e:Laya.Event):void{
